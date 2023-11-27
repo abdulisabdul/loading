@@ -1,0 +1,25 @@
+<div class="preloader" style="visibility:hidden;">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<script>
+  showLoader()
+  $(document).ready(function() {
+    showLoader(false)
+  })
+  function showLoader(show = true) {
+        const preloader = $(".preloader");
+
+        if (show) {
+            preloader.css({
+                opacity: 1,
+                visibility: "visible",
+            });
+        } else {
+            preloader.css({
+                opacity: 0,
+                visibility: "hidden",
+            });
+        }
+    }
+</script>
